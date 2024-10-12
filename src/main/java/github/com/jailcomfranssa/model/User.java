@@ -22,7 +22,7 @@ public class User extends BaseEntity<Long>{
     private String fullName;
     private String email;
     private String senha;
-    private USER_ROLE role;
+    private USER_ROLE role = USER_ROLE.ROLE_CUSTOMER;
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
